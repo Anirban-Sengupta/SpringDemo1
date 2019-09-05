@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.ModelAndView;
 
 import demomvc.service.Service;
-@Component
+
 @Controller
 public class AddController {
 	@RequestMapping("/add")
