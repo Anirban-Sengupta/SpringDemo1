@@ -10,15 +10,21 @@ import demomvc.service.Service;
 
 @Controller
 public class AddController {
+	
 	@RequestMapping("/add")
+	
 	public ModelAndView add(HttpServletRequest req, HttpServletResponse res) {
+		
 		int i = Integer.parseInt(req.getParameter("t1"));
-		int j = Integer.parseInt(res.getParameter("t2"));
+		int j = Integer.parseInt(req.getParameter("t2"));
+		
 		Service as = new Service();
-		int k = as.add(i, j);
+		int k = as.add1(i, j);
+		
 		ModelAndView mv = new ModelAndView();
-		mv.setView("Display.jsp);"
+		mv.setViewName("Display.jsp");
 		mv.addObject("result",k);
+		
 		return mv;
 	}
 
